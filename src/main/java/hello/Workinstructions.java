@@ -1,25 +1,24 @@
 package hello;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity // This tells Hibernate to make a table out of this class
 public class Workinstructions {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue
 //    private Integer id;
 
-    private String Unit_Nbr;
+    @Column(name = "`Unit Nbr`")
+    private String unitnbr;
 
-    public String getUnit_Nbr() {
-        return Unit_Nbr;
+    public String getUnitnbr() {
+        return unitnbr;
     }
 
-    public void setUnit_Nbr(String unit_Nbr) {
-        Unit_Nbr = unit_Nbr;
+    public void setUnitnbr(String unitnbr) {
+        this.unitnbr = unitnbr;
     }
+
 //    private String email;
 /*
     public Integer getId() {
